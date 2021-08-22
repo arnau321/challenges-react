@@ -1,0 +1,17 @@
+.weather {
+  display: flex;
+  flex-direction: row;
+  background-color: coral;
+  border-width: thick;
+  justify-content: center;
+  margin: 20%;
+  border-style: solid;
+}
+.leftBlock {
+  border-style: solid;
+   text-align: center;
+}
+.rightBlock {
+  border-style: solid;
+   text-align: center;
+}
