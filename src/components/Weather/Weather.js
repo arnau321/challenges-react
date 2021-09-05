@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import '../../../src/index.css'
-import { Container, Row, Col, Button, Form } from 'react-bootstrap'
+import { Container, Row, Col, Button, Form, Table } from 'react-bootstrap'
 import './StyleWeather.css'
 import axios from 'axios'
 
@@ -17,6 +17,7 @@ class Weather extends Component {
         temperature: null,
         humidity: null,
         conditions: ''
+
     }
   }
 
@@ -67,7 +68,7 @@ axios.get(url)
                           value={city}
                           placeholder='City'
                           onChange={this.handleChange}
-                        />
+                        /><br></br>
                       </Form.Group>
                       <Form.Group controlId='state'>
                         <Form.Control
@@ -82,10 +83,33 @@ axios.get(url)
                     </Form>
                   </div>
                 </div>
-                <h4>Location: {location}, {country}</h4>
+                {/* <h4>Location: {location}, {country}</h4>
                 <h4>Temperature: {temperature} F</h4>
                 <h4>Humidity: {humidity}%</h4>
-                <h4>Conditions: {conditions}</h4>
+                <h4>Conditions: {conditions}</h4> */}
+                <Table responsive="sm">
+                <tbody>
+                  <tr>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Location: </td>
+                    <td>{location}, {country}</td>
+                  </tr>
+                  <tr>
+                    <td>Temperature: </td>
+                    <td>{temperature} </td>
+                  </tr>
+                  <tr>
+                    <td>Humidity: </td>
+                    <td>{humidity}</td> 
+                  </tr>
+                  <tr>
+                    <td>Conditions: </td>
+                    <td>{conditions}</td>
+                  </tr>
+                  </tbody>
+                </Table>
              </Col>
             </Row>
           </Container>
