@@ -3,6 +3,7 @@ import'./App.css'
 import { Route } from 'react-router-dom'
 import Header from './components/Header/Header'
 import Weather from './components/Weather/Weather'
+import Momentum from './components/Momentum/Momentum'
 
 
 class App extends Component {
@@ -11,7 +12,8 @@ class App extends Component {
   return (
     <div><Header/>
       <main>
-      <Route path='/weather' component={Weather}/>
+        <Route exact path='/weather' component={Weather}/>
+        <Route exact path='/momentum' component={Momentum}/>
       </main>
     </div>
   )
